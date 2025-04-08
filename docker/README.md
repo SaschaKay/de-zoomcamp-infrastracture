@@ -54,7 +54,7 @@ After running the command, open <http://localhost:LOCAL_PORT> in your browser.
 
 
 
-> 📝 Jupiter Notebook automatically assigns new ports for each new process. To see running notebooks and their port numbers, use:
+> 📝 VS Code automatically assigns new ports for each new process. To see running notebooks and their port numbers, use:
 > ```bash
 > docker exec -it <jupyter_container_name> jupyter notebook list # shows the running notebooks and their port numbers
 > ```
