@@ -30,7 +30,7 @@ You should already have:
 
 ### ❓ What if I don`t want to use Google Cloud? 
 
-You can still follow along, but will need to adjust things manually:
+You can still follow along, but you will need to adjust things manually:
 
 - Configure a VM on another cloud manually.  
   For compatibility check the same VM image shown in <mark>terraform/terraform_gcs/variables.tf</mark> and find matching images via [Ubuntu Cloud Image Finder](https://cloud-images.ubuntu.com/locator/)
@@ -42,7 +42,8 @@ You can still follow along, but will need to adjust things manually:
 ## 🛠️ How to create a VM in Google Cloud?
 
 1. Copy this repository to a machine with a configured SSH connection to your Google Cloud
-2. Change key file in `de-zoomcamp-infrastracture/terraform/terraform_gcs/keys/` (in this folder you can see an _example_ of how this file looks).
+2. Change the key file in `de-zoomcamp-infrastracture/terraform/terraform_gcs/keys/` (in this folder, you can see an _example_ of how this file looks).
+3. Create a Google Access Token with `/terraform/terraform_gcs/keys/get_access_key.bash`
    
    > :warning: DO NOT PUSH YOUR ACTUAL KEYS TO YOUR GIT REPO
 2. Apply it in `de-zoomcamp-infrastracture/terraform/terraform_gcs/` to create a VM
@@ -85,7 +86,7 @@ OS Login allows secure, reusable SSH access without rotating temporary keys.
    sudo chown -R $USER:YOUR_OLD_USER_NAME /home/YOUR_OLD_USER_NAME
 ``````
     
-#### 🔐 If you want to have same SSH connections as a previous user:
+#### 🔐 If you want to have the same SSH connections as a previous user:
 
 ````bash
    sudo cp -r /home/PRECIOUS_USER/.ssh ~
